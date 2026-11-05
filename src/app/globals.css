@@ -1,0 +1,227 @@
+@import "tailwindcss";
+
+@layer base {
+  /* THEME 1: Apple Studio (Minimalisme high-tech californien) */
+  :root,
+  [data-theme="apple"] {
+    --bg-canvas: #faf8f5;
+    --bg-surface: #ffffff;
+    --bg-subtle: #f2efe9;
+    --border-color: rgba(24, 21, 18, 0.08);
+    --border-hover: rgba(24, 21, 18, 0.22);
+    --text-primary: #181512;
+    --text-secondary: #575049;
+    --text-muted: #8a8279;
+    --accent-primary: #181512;
+    --accent-contrast: #faf8f5;
+    --accent-badge: #4a5d46;
+    --accent-badge-bg: rgba(74, 93, 70, 0.1);
+    --accent-gold: #c59b27;
+    --shadow-card: 0 10px 30px -10px rgba(24, 21, 18, 0.05);
+    --shadow-elevated: 0 20px 50px -12px rgba(24, 21, 18, 0.09);
+    --navbar-bg: rgba(250, 248, 245, 0.85);
+    --card-radius: 28px;
+    --font-heading: var(--font-sans);
+  }
+
+  /* THEME 2: Matcha & Sauge (Coffee Shop Végétal & Scandinave) */
+  [data-theme="matcha"] {
+    --bg-canvas: #edf3ec;
+    --bg-surface: #f9fbf8;
+    --bg-subtle: #dbe7da;
+    --border-color: rgba(33, 56, 36, 0.12);
+    --border-hover: rgba(33, 56, 36, 0.35);
+    --text-primary: #1c301f;
+    --text-secondary: #425844;
+    --text-muted: #728c74;
+    --accent-primary: #2b4d2f;
+    --accent-contrast: #f9fbf8;
+    --accent-badge: #2b4d2f;
+    --accent-badge-bg: rgba(43, 77, 47, 0.15);
+    --accent-gold: #5b875f;
+    --shadow-card: 0 10px 30px -10px rgba(28, 48, 31, 0.08);
+    --shadow-elevated: 0 20px 50px -12px rgba(28, 48, 31, 0.14);
+    --navbar-bg: rgba(237, 243, 236, 0.88);
+    --card-radius: 20px;
+    --font-heading: var(--font-sans);
+  }
+
+  /* THEME 3: Terracotta Sunset (Méditerranéen Chaud & Solaire) */
+  [data-theme="terracotta"] {
+    --bg-canvas: #faeee4;
+    --bg-surface: #fff8f2;
+    --bg-subtle: #eed8c7;
+    --border-color: rgba(124, 50, 24, 0.14);
+    --border-hover: rgba(124, 50, 24, 0.38);
+    --text-primary: #3d170a;
+    --text-secondary: #743a25;
+    --text-muted: #a36954;
+    --accent-primary: #b33917;
+    --accent-contrast: #ffffff;
+    --accent-badge: #b33917;
+    --accent-badge-bg: rgba(179, 57, 23, 0.12);
+    --accent-gold: #d86927;
+    --shadow-card: 0 10px 30px -10px rgba(124, 50, 24, 0.09);
+    --shadow-elevated: 0 22px 55px -12px rgba(124, 50, 24, 0.16);
+    --navbar-bg: rgba(250, 238, 228, 0.88);
+    --card-radius: 24px;
+    --font-heading: var(--font-sans);
+  }
+
+  /* THEME 4: Salon de Thé Ancien (Haute Pâtisserie Serif & Velours) */
+  [data-theme="editorial"] {
+    --bg-canvas: #f5eee6;
+    --bg-surface: #fdfaf7;
+    --bg-subtle: #e8ded2;
+    --border-color: rgba(74, 34, 42, 0.14);
+    --border-hover: rgba(74, 34, 42, 0.35);
+    --text-primary: #33151b;
+    --text-secondary: #5e3b43;
+    --text-muted: #8c6a72;
+    --accent-primary: #5e1f2b;
+    --accent-contrast: #fdfaf7;
+    --accent-badge: #7d2a3a;
+    --accent-badge-bg: rgba(125, 42, 58, 0.12);
+    --accent-gold: #b37e29;
+    --shadow-card: 0 10px 30px -10px rgba(51, 21, 27, 0.08);
+    --shadow-elevated: 0 22px 50px -12px rgba(51, 21, 27, 0.15);
+    --navbar-bg: rgba(245, 238, 230, 0.88);
+    --card-radius: 10px;
+    --font-heading: var(--font-serif);
+  }
+
+  /* THEME 5: Tokyo Pop & Shokupan (Néon Shibuya / Street Coffee Moderne) */
+  [data-theme="cyber"] {
+    --bg-canvas: #0d0a1a;
+    --bg-surface: #17132c;
+    --bg-subtle: #251f42;
+    --border-color: rgba(120, 100, 240, 0.22);
+    --border-hover: rgba(140, 120, 255, 0.55);
+    --text-primary: #f8f7ff;
+    --text-secondary: #c7c1ea;
+    --text-muted: #8b83b8;
+    --accent-primary: #6366f1;
+    --accent-contrast: #ffffff;
+    --accent-badge: #a855f7;
+    --accent-badge-bg: rgba(168, 85, 247, 0.22);
+    --accent-gold: #ec4899;
+    --shadow-card: 0 12px 35px -10px rgba(0, 0, 0, 0.7);
+    --shadow-elevated: 0 25px 65px -15px rgba(99, 102, 241, 0.35);
+    --navbar-bg: rgba(13, 10, 26, 0.88);
+    --card-radius: 32px;
+    --font-heading: var(--font-sans);
+  }
+
+  /* THEME 6: Dark Speakeasy (Bar Caché Haut de Gamme & Or) */
+  [data-theme="nocturne"] {
+    --bg-canvas: #090807;
+    --bg-surface: #141210;
+    --bg-subtle: #211d1a;
+    --border-color: rgba(229, 185, 78, 0.15);
+    --border-hover: rgba(229, 185, 78, 0.45);
+    --text-primary: #f6f2ec;
+    --text-secondary: #beb4a8;
+    --text-muted: #80766c;
+    --accent-primary: #e5b94e;
+    --accent-contrast: #090807;
+    --accent-badge: #e5b94e;
+    --accent-badge-bg: rgba(229, 185, 78, 0.15);
+    --accent-gold: #e5b94e;
+    --shadow-card: 0 14px 40px -10px rgba(0, 0, 0, 0.8);
+    --shadow-elevated: 0 28px 70px -15px rgba(229, 185, 78, 0.15);
+    --navbar-bg: rgba(9, 8, 7, 0.88);
+    --card-radius: 20px;
+    --font-heading: var(--font-sans);
+  }
+
+  /* STRUCTURAL & LAYOUT TRANSFORMATIONS PER THEME */
+
+  /* 1. EDITORIAL / SALON DE THÉ : Réorganise la Hero section en format journal littéraire */
+  [data-theme="editorial"] .editorial-showcase {
+    display: block !important;
+  }
+  [data-theme="editorial"] #top .max-w-3xl {
+    text-align: left !important;
+    max-width: 100% !important;
+  }
+  [data-theme="editorial"] #top h1 {
+    font-size: 3.5rem !important;
+    line-height: 1.05 !important;
+  }
+  [data-theme="editorial"] #top p {
+    margin-left: 0 !important;
+  }
+  [data-theme="editorial"] #top .flex-col.sm\:flex-row {
+    justify-content: flex-start !important;
+  }
+
+  /* 2. MATCHA / BOTANIQUE : Masque les blocs trop textuels et focalise sur l'écrin zen & le végétal */
+  [data-theme="matcha"] .editorial-showcase {
+    display: block !important;
+  }
+  [data-theme="matcha"] #le-lieu {
+    padding-top: 8rem !important;
+    padding-bottom: 8rem !important;
+  }
+
+  /* 3. TOKYO POP / CYBER : Inverse l'ordre d'affichage, booste les cartes et le Shokupan */
+  [data-theme="cyber"] .editorial-showcase {
+    display: block !important;
+  }
+  [data-theme="cyber"] #menu-detaille {
+    border-width: 2px !important;
+    border-color: var(--accent-primary) !important;
+  }
+  [data-theme="cyber"] article:hover {
+    box-shadow: 0 0 25px rgba(99, 102, 241, 0.45) !important;
+  }
+
+  /* 4. TERRACOTTA : Grands blocs en plein écran façon magazine méditerranéen */
+  [data-theme="terracotta"] .editorial-showcase {
+    display: block !important;
+  }
+  [data-theme="terracotta"] #top {
+    padding-top: 5rem !important;
+  }
+
+  /* 5. NOCTURNE : Atmosphère club secret & carte intimiste */
+  [data-theme="nocturne"] .editorial-showcase {
+    display: block !important;
+  }
+  [data-theme="nocturne"] #avis-clients {
+    border-color: rgba(229, 185, 78, 0.2) !important;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+
+  body {
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+
+  h1, h2, h3, .theme-heading {
+    font-family: var(--font-heading);
+    transition: font-family 0.3s ease;
+  }
+
+  ::selection {
+    background-color: var(--accent-badge-bg);
+    color: var(--text-primary);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
